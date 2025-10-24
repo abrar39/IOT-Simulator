@@ -132,7 +132,7 @@ If you’d like to add new sensor types or output integrations, please open a pu
 
 ## 🪪 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 ---
 
