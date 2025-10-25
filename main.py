@@ -17,7 +17,9 @@ if __name__ == "__main__":
         "broker": config["mqtt"]["broker"],
         "port": config["mqtt"]["port"],
         "topic_prefix": config["mqtt"]["topic_prefix"],
-        "keepalive": config["mqtt"]["keepalive"]
+        "keepalive": config["mqtt"]["keepalive"],
+        "username": config["mqtt"]["username"],
+        "password": config["mqtt"]["password"]
     }
 
     simulator = IOTSimulator(

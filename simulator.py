@@ -27,7 +27,9 @@ class IOTSimulator:
                 broker=mqtt_config["broker"],
                 port=mqtt_config["port"],
                 topic_prefix=mqtt_config["topic_prefix"],
-                keepalive=mqtt_config.get("keepalive", 60)
+                keepalive=mqtt_config.get("keepalive", 60),
+                username=mqtt_config["username"],
+                password=mqtt_config["password"]
             )
             
             # connect to the client

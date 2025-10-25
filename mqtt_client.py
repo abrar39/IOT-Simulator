@@ -3,12 +3,17 @@ import paho.mqtt.client as mqtt
 from datetime import datetime
 
 class MQTTClient:
-    def __init__(self, broker, port, topic_prefix, keepalive=60):
+    def __init__(self, broker, port, topic_prefix, keepalive=60, username=None, password=None):
         self.broker = broker
         self.port = port
         self.topic_prefix = topic_prefix
         self.keepalive = keepalive
+        self.username = username
+        self.password = password
         self.client = mqtt.Client()
+
+        if username and password:
+            self.client.username_pw_set(username, password)
 
     def connect(self):
         self.client.connect(self.broker, self.port, self.keepalive)
