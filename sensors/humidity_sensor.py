@@ -8,5 +8,5 @@ class HumiditySensor(BaseSensor):
             min_value=10.0,
             max_value=90.0, 
             unit="%",
-            interval=1
+            interval=30
         )

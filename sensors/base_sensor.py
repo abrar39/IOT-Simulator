@@ -1,9 +1,8 @@
-# The base class for sensors
 import random
-import time
 import datetime
 
 class BaseSensor:
+    # The base class for sensors
     def __init__(self, sensor_id, sensor_type, min_value, max_value, unit, interval=1):
         self.sensor_id = sensor_id
         self.sensor_type = sensor_type
@@ -30,11 +29,3 @@ class BaseSensor:
 
         return data
     
-    def stream_data(self):
-        """
-        Stream the data continuously.
-        """
-        while True:
-            print(self.generate_data())
-            # Sleep for time interval
-            time.sleep(self.interval)

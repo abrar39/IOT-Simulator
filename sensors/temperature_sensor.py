@@ -8,5 +8,5 @@ class TemperatureSensor(BaseSensor):
             min_value=18.0,
             max_value=35.0, 
             unit="°C",
-            interval=1
+            interval=5
         )

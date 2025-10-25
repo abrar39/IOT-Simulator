@@ -8,5 +8,5 @@ class VibrationSensor(BaseSensor):
             min_value=0.1,
             max_value=10.0, 
             unit="mm/s (RMS)",
-            interval=1
+            interval=0.5
         )
