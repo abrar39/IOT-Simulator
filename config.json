@@ -2,7 +2,14 @@
   "output": {
     "log_to_csv": true,
     "print_data": true,
-    "file_path": "output/data_log.csv"
+    "file_path": "output/data_log.csv",
+    "mqtt_enabled": true
+  },
+  "mqtt": {
+    "broker": "test.mosquitto.org", 
+    "port": 1883,
+    "topic_prefix": "iot_simulator", 
+    "keepalive": 60
   },
   "sensors": [
     {
