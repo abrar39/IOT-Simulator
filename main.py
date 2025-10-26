@@ -1,11 +1,15 @@
 from config_loader import load_config
 from sensor_factory import create_sensors_from_config
 from simulator import IOTSimulator
+import os
+from dotenv import load_dotenv
 
 if __name__ == "__main__":
 
     # Dynamically create sensors
     # Load the configuration file
+    # and the environment variables
+    load_dotenv()
     config = load_config("config.json")
 
     # create sensors from configuration file
@@ -18,9 +22,11 @@ if __name__ == "__main__":
         "port": config["mqtt"]["port"],
         "topic_prefix": config["mqtt"]["topic_prefix"],
         "keepalive": config["mqtt"]["keepalive"],
-        "username": config["mqtt"]["username"],
-        "password": config["mqtt"]["password"]
+        "username": os.getenv("MQTT_USERNAME"),
+        "password": os.getenv("MQTT_PASSWORD")
     }
+
+    #print(mqtt_config) # for debugging
 
     simulator = IOTSimulator(
         sensors=sensors, 

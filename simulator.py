@@ -30,8 +30,8 @@ class IOTSimulator:
                 port=mqtt_config["port"],
                 topic_prefix=mqtt_config["topic_prefix"],
                 keepalive=mqtt_config.get("keepalive", 60),
-                username=os.getenv("MQTT_USERNAME"),
-                password=os.getenv("MQTT_PASSWORD")
+                username=mqtt_config["username"],
+                password=mqtt_config["password"]
             )
             
             # connect to the client
