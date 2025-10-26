@@ -8,8 +8,6 @@
   "mqtt": {
     "broker": "localhost", 
     "port": 1883,
-    "username": "iotuser",
-    "password": "iotuser",
     "topic_prefix": "iot_simulator", 
     "keepalive": 60
   },

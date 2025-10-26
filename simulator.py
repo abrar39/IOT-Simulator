@@ -4,6 +4,8 @@ import random
 import csv
 from utils.data_logger import DataLogger
 from mqtt_client import MQTTClient
+import os
+from dotenv import load_dotenv
 
 class IOTSimulator:
     """
@@ -28,8 +30,8 @@ class IOTSimulator:
                 port=mqtt_config["port"],
                 topic_prefix=mqtt_config["topic_prefix"],
                 keepalive=mqtt_config.get("keepalive", 60),
-                username=mqtt_config["username"],
-                password=mqtt_config["password"]
+                username=os.getenv("MQTT_USERNAME"),
+                password=os.getenv("MQTT_PASSWORD")
             )
             
             # connect to the client
