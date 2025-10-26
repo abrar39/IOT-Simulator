@@ -13,7 +13,7 @@ class IOTSimulator:
     simulates process conditions and logs the data into a csv
     if required.
     """
-    def __init__(self, sensors, log_to_csv=True, print_data=False, output_file="output/data_log.csv", mqtt_config=None):
+    def __init__(self, sensors, log_to_csv=False, print_data=False, output_file=None, mqtt_config=None):
         self.sensors = sensors
         self.log_to_csv = log_to_csv
         self.print_data = print_data
