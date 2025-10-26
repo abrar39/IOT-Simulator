@@ -27,6 +27,7 @@ if __name__ == "__main__":
     }
 
     #print(mqtt_config) # for debugging
+    #print(config)
 
     simulator = IOTSimulator(
         sensors=sensors, 
