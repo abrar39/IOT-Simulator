@@ -42,9 +42,9 @@ class IOTSimulator:
                 writer = csv.DictWriter(
                     f,
                     fieldnames=[
-                        "timestamp", 
                         "sensor_id", 
-                        "sensor_type", 
+                        "sensor_type",
+                        "timestamp",  
                         "value", 
                         "unit"
                     ]
