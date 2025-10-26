@@ -1,6 +1,6 @@
 {
   "output": {
-    "log_to_csv": true,
+    "log_to_csv": false,
     "print_data": false,
     "file_path": "output/data_log.csv",
     "mqtt_enabled": true
